@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Delish — Food Website</title>
+  <style>
+    :root{--accent:#FF6B35;--muted:#666;--bg:#fff}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:linear-gradient(180deg,#fff,#fff); color:#222}
+    header{background:var(--accent); color:white; padding:28px 20px; text-align:center}
+    .container{max-width:1100px;margin:28px auto;padding:0 18px}
+    h1{margin:0;font-size:clamp(28px,4.5vw,44px);letter-spacing:0.2px}
+    p.lead{margin:10px auto 0; color:rgba(255,255,255,0.95);max-width:900px}
+
+    /* Two images directly after main heading */
+    .hero-images{display:flex;gap:16px;margin-top:20px;justify-content:center;flex-wrap:wrap}
+    .hero-images img{width:48%;min-width:220px;height:260px;object-fit:cover;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.12)}
+
+    /* Layout */
+    nav{display:flex;justify-content:center;gap:14px;margin-top:16px}
+    nav a{color:white;text-decoration:none;padding:8px 12px;border-radius:8px;background:rgba(255,255,255,0.12)}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:28px}
+    .card{background:#fff;border-radius:12px;padding:14px;box-shadow:0 6px 16px rgba(0,0,0,0.06)}
+    .card img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+    .card h3{margin:10px 0 6px;font-size:18px}
+    .card p{color:var(--muted);margin:0 0 10px}
+    .btn{display:inline-block;padding:8px 12px;border-radius:10px;background:var(--accent);color:white;text-decoration:none}
+
+    footer{margin:40px 0 80px;color:var(--muted);text-align:center}
+
+    /* Responsive tweaks */
+    @media (max-width:640px){
+      header{padding:22px 14px}
+      .hero-images img{width:100%;height:220px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Delish — Home of Simple Recipes</h1>
+      <p class="lead">Tasty, quick and budget-friendly recipes for everyday cooking.</p>
+
+      <nav>
+        <a href="#recipes">Recipes</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <!-- TWO PICTURES AFTER MAIN HEADING -->
+      <!-- Replace the src values with your own images (e.g., images/dish1.jpg and images/dish2.jpg) -->
+      <div class="hero-images" aria-hidden="false">
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=1200&q=80&auto=format&fit=crop" alt="Delicious plated dish 1">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=80&auto=format&fit=crop" alt="Delicious plated dish 2">
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="recipes">
+      <h2 style="margin-top:6px">Popular Recipes</h2>
+      <div class="grid">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=900&q=60&auto=format&fit=crop" alt="Recipe 1">
+          <h3>One-pot Tomato Pasta</h3>
+          <p>Cook pasta directly in a rich tomato sauce for a speedy weeknight dinner.</p>
+          <a class="btn" href="#">View Recipe</a>
+        </article>
+
+        <article class="card">
+          <img src="chickpea.jpg" alt="Recipe 2">
+          <h3>Spicy Chickpea Wraps</h3>
+          <p>High-protein, vegetarian wraps with crunchy veggies and zesty sauce.</p>
+          <a class="btn" href="#">View Recipe</a>
+        </article>
+
+        <article class="card">
+          <img src="chicken.jpg" alt="Recipe 3">
+          <h3>Herbed Grilled Chicken</h3>
+          <p>Juicy chicken breasts marinated in lemon and fresh herbs.</p>
+          <a class="btn" href="#">View Recipe</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" style="margin-top:30px">
+      <h2>About Delish</h2>
+      <p style="color:var(--muted)">Delish is a small home-cooking blog focused on fast, flavourful meals. We test each recipe for ease and clarity so you can cook with confidence.</p>
+    </section>
+
+    <section id="contact" style="margin-top:24px">
+      <h2>Contact</h2>
+      <p style="color:var(--muted)">Have a recipe idea? <a href="mailto:hello@delish.example">Email us</a> or follow on social media.</p>
+    </section>
+
+    <footer>
+      <small>© Delish 2025 · Built with ❤️ — replace images and text to make it yours.</small>
+    </footer>
+  </main>
+</body>
+</html>
